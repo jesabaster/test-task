@@ -1,0 +1,9 @@
+.shape-filter-item {
+  font-family: "Poppins";
+  cursor: pointer;
+
+  &:hover,
+  &_checked {
+    text-decoration: underline;
+  }
+}

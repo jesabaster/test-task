@@ -1,0 +1,24 @@
+%button {
+  background-color: white;
+  font-family: "Poppins";
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.secondary-button {
+  @extend %button;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.primary-button {
+  @extend %button;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}

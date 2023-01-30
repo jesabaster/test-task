@@ -1,0 +1,42 @@
+.glasses-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.loading-wrapper {
+  height: calc(100vh - 114px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100vw;
+}
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+@media screen and (max-width: 1300px) {
+  .glasses-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .glasses-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

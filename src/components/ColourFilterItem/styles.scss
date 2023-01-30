@@ -1,0 +1,23 @@
+.color-filter-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: min-content;
+  cursor: pointer;
+
+  &:hover &__img,
+  &__img_checked {
+    border: 1px solid black;
+  }
+
+  &__img {
+    padding: 1.5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+  }
+  &__label {
+    margin-left: 5px;
+    font-family: "Poppins";
+  }
+}

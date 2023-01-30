@@ -1,0 +1,113 @@
+.filters {
+  justify-self: start;
+  &__buttons-wrapper {
+    display: flex;
+
+    &_mobile {
+      display: none;
+      border-right: none;
+      border-left: 1px solid black;
+    }
+  }
+
+  &__button {
+    border: none;
+    border-right: 1px solid black;
+
+    &_mobile {
+      span {
+        margin: 0 5px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__menu {
+    z-index: 50;
+    max-height: 0px;
+    transition: 0.2s;
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    width: 100vw;
+    position: absolute;
+    left: 0;
+
+    &_opened {
+      padding-bottom: 10px;
+      max-height: 300px;
+
+      .filters__menu-content {
+        padding: 30px;
+      }
+    }
+
+    &-content {
+      transition: padding 0.2s;
+      padding: 0px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+
+  &__filters-info {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100vw;
+    overflow-y: auto;
+  }
+
+  &__shape-filters {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__colour-filters {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .filters {
+    justify-self: end;
+    &__buttons-wrapper {
+      display: none;
+
+      &_mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .filters {
+    &__menu-content {
+      display: grid;
+      grid-gap: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .filters {
+    justify-self: center;
+    &__button {
+      border: none;
+      padding: 16px 16px;
+    }
+    &__buttons-wrapper {
+      &_mobile {
+        border: none;
+      }
+    }
+  }
+}
